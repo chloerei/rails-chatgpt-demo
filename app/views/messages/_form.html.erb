@@ -1,0 +1,7 @@
+<%= form_with model: Message.new, url: conversation_messages_path(@conversation), id: "message_form" do |form| %>
+  <%= form.text_field :content, class: "form-control", autocomplete: "off", placeholder: "Ask...", id: "message_content" %>
+
+  <script>
+    document.getElementById("message_content").focus();
+  </script>
+<% end %>
