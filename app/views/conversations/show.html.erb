@@ -21,3 +21,5 @@
     <%= render partial: "messages/form" %>
   </div>
 </div>
+
+<%= turbo_stream_from @conversation, :messages %>

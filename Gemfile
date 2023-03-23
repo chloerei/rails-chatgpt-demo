@@ -73,3 +73,8 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "dotenv-rails", "~> 2.8"
+gem "redis", "~> 5.0"
+
+gem "ruby-openai", "~> 3.6"

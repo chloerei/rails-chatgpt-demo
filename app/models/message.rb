@@ -11,4 +11,6 @@ class Message < ApplicationRecord
     completed: 1,
     failed: 2
   }
+
+  broadcasts_to ->(message) { [ message.conversation, :messages ] }, partial: "messages/message"
 end
