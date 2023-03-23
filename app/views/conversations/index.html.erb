@@ -1,0 +1,18 @@
+<div class="d-flex align-items-center my-3">
+  <div class="flex-grow-1 fs-4">
+    Conversation
+  </div>
+  <%= form_with model: Conversation.new do |form| %>
+    <button class="btn btn-primary" type="submit">
+      New
+    </button>
+  <% end %>
+</div>
+
+<div class="list-group">
+  <% Conversation.order(id: :desc).each do |conversation| %>
+    <a href="<%= conversation_path(conversation) %>" class="list-group-item">
+      #<%= conversation.id %>
+    </a>
+  <% end %>
+</div>
